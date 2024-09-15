@@ -1,165 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Serenity Palace</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Georgia', 'Palatino', serif; /* 更加优雅的字体 */
-            color: white;
-            background-color: #1a1a4a;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        .logo {
-            width: 150px;
-        }
-        nav a {
-            font-size: 1.1em; /* 调整字体大小以增加优雅感 */
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600; /* 加粗导航文本，使其更加醒目 */
-        }
-        .hero {
-            background-image: url('./image/hotel-exterior.jpg'); /* 使用你提供的酒店外部图像 */
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            align-items: flex-end;
-            padding: 40px;
-        }
-        .hero h1 {
-            font-size: 4em;
-            margin: 0;
-            color: #f8f4e3; /* 柔和的浅色，以提高优雅感 */
-            font-weight: 700;
-        }
-        .sections {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-        .section {
-            flex: 1;
-            margin: 0 10px;
-            background-color: #2a2a5a;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .section h2 {
-            font-size: 1.75em; /* 增大标题字体 */
-            margin-top: 0;
-            font-weight: 600;
-            color: #f0e6d6; /* 浅色调提升优雅感 */
-        }
-        .section img {
-            width: 100%;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-        button {
-            background-color: #f8f4e3; /* 浅色按钮 */
-            color: #1a1a4a;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Georgia', 'Palatino', serif;
-        }
-        .rooms {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 40px;
-        }
-        .room {
-            flex: 1;
-            margin: 0 10px;
-            background-color: #2a2a5a;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .room h3 {
-            font-size: 1.5em;
-            font-weight: 600;
-            color: #f0e6d6;
-        }
-        .room img {
-            width: 100%;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Georgia", "Palatino", serif; /* 更加优雅的字体 */
+        color: white;
+        background-color: #1a1a4a;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+      .logo {
+        width: 150px;
+      }
+      nav a {
+        font-size: 1.1em; /* 调整字体大小以增加优雅感 */
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: 600; /* 加粗导航文本，使其更加醒目 */
+      }
+      .hero {
+        background-image: url("images/hotel-exterior.jpg"); /* 修改了图片路径 */
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        display: flex;
+        align-items: flex-end;
+        padding: 40px;
+      }
+      .hero h1 {
+        font-size: 4em;
+        margin: 0;
+        color: #f8f4e3; /* 柔和的浅色，以提高优雅感 */
+        font-weight: 700;
+      }
+      .sections {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* 添加以适应小屏幕 */
+        margin-top: 40px;
+      }
+      .section {
+        flex: 1 1 45%; /* 修改以更好地适应布局 */
+        margin: 10px;
+        background-color: #2a2a5a;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .section h2 {
+        font-size: 1.75em; /* 增大标题字体 */
+        margin-top: 0;
+        font-weight: 600;
+        color: #f0e6d6; /* 浅色调提升优雅感 */
+      }
+      .section img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        background-color: #f8f4e3; /* 浅色按钮 */
+        color: #1a1a4a;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "Georgia", "Palatino", serif;
+      }
+      .rooms {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* 添加以适应小屏幕 */
+        margin-top: 40px;
+      }
+      .room {
+        flex: 1 1 45%; /* 修改以更好地适应布局 */
+        margin: 10px;
+        background-color: #2a2a5a;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .room h3 {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: #f0e6d6;
+      }
+      .room img {
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <!-- 将 logo 替换为相对根目录的路径 -->
-            <img src="./image/serenity-palace-logo.png" alt="Serenity Palace Logo" class="logo"> 
-            <nav>
-                <a href="#">HOME</a>
-                <a href="#">ROOMS</a>
-                <a href="#">OFFERS</a>
-                <a href="#">CONTACT</a>
-                <!-- 修复按钮的文本为 'BOOK' -->
-                <button>BOOK</button>
-            </nav>
-        </header>
+      <header>
+        <!-- 修改了 logo 的图片路径 -->
+        <img
+          src="images/serenity-palace-logo.png"
+          alt="Serenity Palace Logo"
+          class="logo"
+        />
+        <nav>
+          <a href="#">HOME</a>
+          <a href="#">ROOMS</a>
+          <a href="#">OFFERS</a>
+          <a href="#">CONTACT</a>
+          <!-- 修复按钮的文本为 'BOOK' -->
+          <button>BOOK</button>
+        </nav>
+      </header>
 
-        <div class="hero">
-            <h1>Serenity Palace</h1>
-        </div>
+      <div class="hero">
+        <h1>Serenity Palace</h1>
+      </div>
 
-        <div class="sections">
-            <div class="section">
-                <h2>Featured Rooms & Suites</h2>
-                <img src="./image/beachfront-living-room.jpg" alt="Beachfront Living Room">
-                <p>Explore our luxurious accommodations designed for your comfort.</p>
-                <button>SEE MORE</button>
-            </div>
-            <div class="section">
-                <h2>About Us</h2>
-                <p>Discover the charm of Serenity Palace, where comfort meets elegance in an unforgettable tropical setting.</p>
-                <button>SEE MORE</button>
-            </div>
-            <div class="section">
-                <h2>Highlights of Amenities</h2>
-                <p>Experience unparalleled luxury with world-class amenities, including private infinity pools and spa services.</p>
-            </div>
-            <div class="section">
-                <h2>Latest Offers</h2>
-                <p>Enjoy exclusive discounts and packages tailored for your perfect escape.</p>
-            </div>
+      <div class="sections">
+        <div class="section">
+          <h2>Featured Rooms & Suites</h2>
+          <!-- 修改了图片路径 -->
+          <img src="images/beachfront-living-room.jpg" alt="Beachfront Living Room" />
+          <p>Explore our luxurious accommodations designed for your comfort.</p>
+          <button>SEE MORE</button>
         </div>
+        <div class="section">
+          <h2>About Us</h2>
+          <p>
+            Discover the charm of Serenity Palace, where comfort meets elegance
+            in an unforgettable tropical setting.
+          </p>
+          <button>SEE MORE</button>
+        </div>
+        <div class="section">
+          <h2>Highlights of Amenities</h2>
+          <p>
+            Experience unparalleled luxury with world-class amenities, including
+            private infinity pools and spa services.
+          </p>
+        </div>
+        <div class="section">
+          <h2>Latest Offers</h2>
+          <p>
+            Enjoy exclusive discounts and packages tailored for your perfect
+            escape.
+          </p>
+        </div>
+      </div>
 
-        <div class="rooms">
-            <div class="room">
-                <img src="./image/chic-bedroom.jpg" alt="Chic Bedroom">
-                <h3>Chic Bedroom</h3>
-                <p>A tranquil space to relax with soothing decor and modern amenities.</p>
-                <button>VIEW DETAILS</button>
-            </div>
-            <div class="room">
-                <img src="./image/tropical-bedroom-retreat.jpg" alt="Tropical Bedroom Retreat">
-                <h3>Tropical Bedroom Retreat</h3>
-                <p>Find serenity in a cozy and tropical-inspired space, ideal for a restful night.</p>
-                <button>VIEW DETAILS</button>
-            </div>
+      <div class="rooms">
+        <div class="room">
+          <!-- 修改了图片路径 -->
+          <img src="images/chic-bedroom.jpg" alt="Chic Bedroom" />
+          <h3>Chic Bedroom</h3>
+          <p>
+            A tranquil space to relax with soothing decor and modern amenities.
+          </p>
+          <button>VIEW DETAILS</button>
         </div>
+        <div class="room">
+          <!-- 修改了图片路径 -->
+          <img
+            src="images/tropical-bedroom-retreat.jpg"
+            alt="Tropical Bedroom Retreat"
+          />
+          <h3>Tropical Bedroom Retreat</h3>
+          <p>
+            Find serenity in a cozy and tropical-inspired space, ideal for a
+            restful night.
+          </p>
+          <button>VIEW DETAILS</button>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
