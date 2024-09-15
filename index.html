@@ -34,7 +34,7 @@
             font-weight: 600; /* 加粗导航文本，使其更加醒目 */
         }
         .hero {
-            background-image: url('images/hotel-exterior.jpg'); /* 使用你提供的酒店外部图像 */
+            background-image: url('images/hotel-exterior.jpg');
             background-size: cover;
             background-position: center;
             height: 500px;
@@ -45,7 +45,7 @@
         .hero h1 {
             font-size: 4em;
             margin: 0;
-            color: #f8f4e3; /* 柔和的浅色，以提高优雅感 */
+            color: #f8f4e3;
             font-weight: 700;
         }
         .sections {
@@ -61,18 +61,20 @@
             border-radius: 10px;
         }
         .section h2 {
-            font-size: 1.75em; /* 增大标题字体 */
+            font-size: 1.75em;
             margin-top: 0;
             font-weight: 600;
-            color: #f0e6d6; /* 浅色调提升优雅感 */
+            color: #f0e6d6;
         }
         .section img {
-            width: 100%;
+            width: 100%; /* 让图片自适应容器 */
+            height: auto; /* 让图片保持原比例 */
+            object-fit: cover; /* 或使用 contain 来让图片完整显示 */
             border-radius: 5px;
             margin-bottom: 10px;
         }
         button {
-            background-color: #f8f4e3; /* 浅色按钮 */
+            background-color: #f8f4e3;
             color: #1a1a4a;
             border: none;
             padding: 10px 20px;
@@ -99,7 +101,9 @@
             color: #f0e6d6;
         }
         .room img {
-            width: 100%;
+            width: 100%; /* 图片将适应容器宽度 */
+            height: 200px; /* 固定高度 */
+            object-fit: cover; /* 图片会裁剪以适应容器 */
             border-radius: 5px;
             margin-bottom: 10px;
         }
@@ -108,14 +112,12 @@
 <body>
     <div class="container">
         <header>
-            <!-- 将 logo 替换为 serenity-palace-logo.png -->
-            <img src="images/serenity-palace-logo.png" alt="Serenity Palace Logo" class="logo"> 
+            <img src="images/serenity-palace-logo.png" alt="Serenity Palace Logo" class="logo">
             <nav>
                 <a href="#">HOME</a>
                 <a href="#">ROOMS</a>
                 <a href="#">OFFERS</a>
                 <a href="#">CONTACT</a>
-                <!-- 修复按钮的文本为 'BOOK' -->
                 <button>BOOK</button>
             </nav>
         </header>
@@ -127,7 +129,7 @@
         <div class="sections">
             <div class="section">
                 <h2>Featured Rooms & Suites</h2>
-                <img src="images/beachfront-living-room.jpg" alt="Beachfront Living Room"> <!-- 替换为实际图片路径 -->
+                <img src="images/beachfront-living-room.jpg" alt="Beachfront Living Room">
                 <p>Explore our luxurious accommodations designed for your comfort.</p>
                 <button>SEE MORE</button>
             </div>
@@ -148,13 +150,13 @@
 
         <div class="rooms">
             <div class="room">
-                <img src="images/chic-bedroom.jpg" alt="Chic Bedroom"> <!-- 替换为实际图片路径 -->
+                <img src="images/chic-bedroom.jpg" alt="Chic Bedroom">
                 <h3>Chic Bedroom</h3>
                 <p>A tranquil space to relax with soothing decor and modern amenities.</p>
                 <button>VIEW DETAILS</button>
             </div>
             <div class="room">
-                <img src="images/tropical-bedroom-retreat.jpg" alt="Tropical Bedroom Retreat"> <!-- 替换为实际图片路径 -->
+                <img src="images/tropical-bedroom-retreat.jpg" alt="Tropical Bedroom Retreat">
                 <h3>Tropical Bedroom Retreat</h3>
                 <p>Find serenity in a cozy and tropical-inspired space, ideal for a restful night.</p>
                 <button>VIEW DETAILS</button>
